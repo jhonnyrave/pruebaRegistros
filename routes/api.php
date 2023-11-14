@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource("documentos", DocDocumentoController::class);
+Route::apiResource("usuarios", UserController::class);
+Route::apiResource("tipos", TipTipoDocumentoController::class);
+Route::apiResource("procesos", ProProcesoController::class);
