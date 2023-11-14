@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\DocDocumentoController;
+use App\Http\Controllers\ProProcesoController;
+use App\Http\Controllers\TipTipoDocumentoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource("documentos", DocDocumentoController::class);
-Route::apiResource("usuarios", UserController::class);
 Route::apiResource("tipos", TipTipoDocumentoController::class);
 Route::apiResource("procesos", ProProcesoController::class);

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\ProProceso;
 use App\Models\TipTipoDocumento;
 use Illuminate\Database\Seeder;
 
@@ -14,14 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-
-        ProProceso::factory()->times(5)->create();
-        TipTipoDocumento::factory()->times(5)->create();
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+      
+        $this->call(ProProcesoTableSeeder::class);
+        $this->call(TipTipoDocumentoTableSeeder::class);
     }
 }

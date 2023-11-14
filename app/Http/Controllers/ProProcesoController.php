@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ProProceso;
 use Illuminate\Http\Request;
 
 class ProProcesoController extends Controller
@@ -11,7 +12,7 @@ class ProProcesoController extends Controller
      */
     public function index()
     {
-        //
+        return ProProceso::all();
     }
 
     /**
